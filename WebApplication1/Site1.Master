@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+<html>
+    <head runat="server">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/Pages/Styles/styles.css">
+        <asp:ContentPlaceHolder ID="Title" runat="server">
+        </asp:ContentPlaceHolder>
+        <title>None</title>
+        <link rel="icon" href="Pages/Styles/favicon.ico" type="image/x-icon"> 
+        <link rel="shortcut icon" href="Pages/Styles/favicon.ico" type="image/x-icon">
+    </head>
+<body>
+    <form runat="server" class="wrapper">
+        <div class="header">
+            <ul class="navbar">
+                <li><a class="active navbar_refs" href="/">Хроники веков</a></li>
+                <li><a class="navbar_refs" href="/Pages/NewsPage.aspx">Новости</a></li>
+                <li><a class="navbar_refs" href="/Pages/PosterPage.aspx">Афиша</a></li>
+                <li><a class="navbar_refs" href="/Pages/AboutUsPage.aspx">О нас</a></li>
+                <li style="float:right"><a class="navbar_refs" href="/Pages/Authorization.aspx">Авторизация</a></li>
+                <li style="float:right"><a class="navbar_refs" href="/Pages/Registration.aspx">Регистрация</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            <img src="/Pages/Styles/museum_logo.jpg" height="75px"></img>
+            <ul class="footer_list">
+                <li>&copy; <%: DateTime.Now.Year %> - Хроники веков</li>
+                <li>About me:</li>
+                <li><a href="https://vk.com/supercilious_me">Vk</a></li>
+                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <img src="/Pages/Styles/вопрос.png" height="15px"/></a></li>
+            </ul>
+        </div>
+    </form>
+</body>
+
+</html>
